@@ -6,7 +6,7 @@ from PIL import Image
 
 # --- Configuration ---
 MODEL_PATH = 'breed_classifier1.h5'
-LABELS_FILE = 'processed_data/labels.npy'
+LABELS_FILE = 'labels.npy'
 IMAGE_SIZE = (256, 256)
 
 # --- Caching the model and labels for better performance ---
@@ -68,4 +68,5 @@ if model is not None:
         st.write(f"#### Confidence: *{confidence:.2%}*")
         
         # Add a confidence bar
+
         st.progress(float(confidence))
